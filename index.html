@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Merchant Hub</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --wa-bg-color: #0b141a;
+      --wa-sidebar-color: #111b21;
+      --wa-header-color: #202c33;
+      --wa-bubble-self: #005c4b;
+      --wa-bubble-other: #202c33;
+      --wa-text-primary: #e9edef;
+      --wa-text-secondary: #8696a0;
+      --wa-accent: #00a884;
+    }
+    body { 
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+      background-color: var(--wa-bg-color);
+      color: var(--wa-text-primary);
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+    .wa-bg {
+      background-color: #0b141a;
+      background-image: url("https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png");
+      background-blend-mode: multiply;
+      background-attachment: fixed;
+      opacity: 0.95;
+    }
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    
+    .chat-bubble-left {
+      position: relative;
+      background: var(--wa-bubble-other);
+      border-radius: 0 8px 8px 8px;
+      box-shadow: 0 1px 0.5px rgba(0,0,0,0.13);
+      color: var(--wa-text-primary);
+    }
+    .chat-bubble-left::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -8px;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0 10px 10px 0;
+      border-color: transparent var(--wa-bubble-other) transparent transparent;
+    }
+
+    .chat-bubble-right {
+      position: relative;
+      background: var(--wa-bubble-self);
+      border-radius: 8px 0 8px 8px;
+      box-shadow: 0 1px 0.5px rgba(0,0,0,0.13);
+      color: var(--wa-text-primary);
+    }
+    .chat-bubble-right::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: -8px;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 10px 10px 0 0;
+      border-color: var(--wa-bubble-self) transparent transparent transparent;
+    }
+    input::placeholder { color: var(--wa-text-secondary); }
+  </style>
+<script type="importmap">
+{
+  "imports": {
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
+    "@google/genai": "https://esm.sh/@google/genai@^1.34.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3"
+  }
+}
+</script>
+</head>
+<body class="h-screen overflow-hidden">
+  <div id="root" class="h-full"></div>
+</body>
+</html>

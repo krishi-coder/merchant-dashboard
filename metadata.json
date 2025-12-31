@@ -1,0 +1,7 @@
+{
+  "name": "Merchant Dashboard",
+  "description": "A WhatsApp-inspired business management tool for cloth merchants to extract bill data from images, log daily transactions, and search histories securely.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
